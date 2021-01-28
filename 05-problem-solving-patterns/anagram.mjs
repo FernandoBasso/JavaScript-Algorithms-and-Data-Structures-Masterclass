@@ -65,7 +65,7 @@ function isString(val) {
  * @param {string} s2
  * @return {boolean}
  */
-function isAnagram1(s1, s2) {
+function isAnagram(s1, s2) {
   if (!isString(s1) || !isString(s2)) return false;
   if (s1.length !== s2.length) return false;
 
@@ -77,18 +77,22 @@ function isAnagram1(s1, s2) {
     freqsS1[c] = (freqsS1[c] || 0) + 1;
 
   for (let c of s2) {
-    if (!freqsS1[c]) return false
+    if (!freqsS1[c]) return false; // <1>
 
     freqsS1[c] -= 1;
   }
 
-  for (let c in freqsS1)
-    if (freqsS1[c] !== 0) return false;
-
   return true;
 }
 
-export {
-  isAnagram1 as isAnagram,
-};
+export { isAnagram };
 
+//
+// <1> In case that char ‘c’ does not exist in ‘freqsS1’, it means it
+// exists in ‘s2’ but not in ‘s1’, so the inputs are not anagrams.
+// However, if it is 0 (which is also falsy), it is not an anagram
+// either because it means we found it again (during this iteration of
+// the loop) on ‘s2’ which means we would decrement it even more, making
+// it ‘-1’. It means the current char doesn't appear with the same
+// frequency on both strings.
+//
