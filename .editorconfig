@@ -9,6 +9,7 @@ max_line_length = 72
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.{rb,blade.php,scss}]
-indent_size = 2
+[*.{md,adoc}]
+max_line_length = 0
+
 
