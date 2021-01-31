@@ -100,6 +100,19 @@ function countUniqVals_v2(nums) {
 // Basically what we return is the length of the portion that we moved
 // to the beginning of the array.
 //
+// In short, this solution involves turning something like this:
+//
+//   [1, 1, 2, 3, 3, 3, 4, 4, 5, 5, 5]
+//
+// into:
+//
+//   [1, 2, 3, 4, 5, n, n, n, n, n, n]
+//                ↑
+//               /
+//              /
+// The index of the last unique element after the rearranging. We return
+// that index (the index 4, not the value at that index) plus 1.
+//
 
 export { countUniqVals_v2 as countUniqVals };
 
