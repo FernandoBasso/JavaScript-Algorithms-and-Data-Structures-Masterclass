@@ -95,7 +95,7 @@ function areThereDups_v2(...args) {
  */
 function areThereDups_v3(...args) {
   ////
-  // > doesn't work in V8 anymore for this sort thing.
+  // ‘>’ doesn't work in V8 anymore for this sort thing.
   //
   // args.sort((a, b) => a > b);
   //
@@ -116,9 +116,31 @@ function areThereDups_v3(...args) {
   return false;
 }
 
+/**
+ * Checks if there are any duplicate values among the arguments.
+ *
+ * Solution using the “multiple pointers” pattern.
+ *
+ * @param {...(number|string|nul|undefined)}
+ * @return {boolean}
+ *
+ * This solution uses a Set. It simply creates a set from the arguments
+ * passed, which automatically discards any duplicates. If the created
+ * set has a different ‘size’ than the input args ‘length’, then it
+ * must be the case that there were duplicate elements that were
+ * discared, and we
+ * know the input contains duplicate elements.
+ *
+ */
+function areThereDups_v4(...args) {
+  if (args.length === 0) return false;
+  return new Set(args).size !== args.length;
+}
+
 export {
   areThereDups_v1,
   areThereDups_v2,
   areThereDups_v3,
+  areThereDups_v4,
 };
 

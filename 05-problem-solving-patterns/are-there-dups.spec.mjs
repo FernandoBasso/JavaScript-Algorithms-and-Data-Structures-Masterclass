@@ -1,5 +1,5 @@
 import {
-  areThereDups_v1 as areThereDups,
+  areThereDups_v4 as areThereDups,
 } from './are-there-dups';
 
 describe('areThereDups()', () => {
