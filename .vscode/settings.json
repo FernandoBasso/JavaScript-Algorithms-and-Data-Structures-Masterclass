@@ -1,0 +1,6 @@
+{
+  "vim.textwidth": 72,
+  "editor.rulers": [72, 80],
+  "editor.wordWrapColumn": 72,
+  "editor.wordWrap": "wordWrapColumn",
+}
