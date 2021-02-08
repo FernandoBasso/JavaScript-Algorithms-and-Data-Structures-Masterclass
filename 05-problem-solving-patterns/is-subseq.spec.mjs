@@ -1,5 +1,5 @@
 import {
-  isSubSeq_v1 as isSubSeq,
+  isSubSeq_v2 as isSubSeq,
 } from './is-subseq';
 
 describe('isSubSeq()', () => {
