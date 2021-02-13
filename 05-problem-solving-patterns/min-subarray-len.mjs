@@ -37,6 +37,8 @@
 // • Space Complexity - O(1)
 //
 
+const log = console.log.bind(console);
+
 /**
  * Finds the minimum subarray length l such that when summed is >= n
  *
@@ -84,12 +86,57 @@ function minSubArrayLen_v1(nums, n) {
 // elements, then three, etc. The first time we find a sum of a subarray
 // that is >= n, we return the length of the subarray.
 //
-// Ever ltime ‘r’ does reaches the end of the array, we start over from
+// Every time ‘r’ does reaches the end of the array, we start over from
 // the beginning of the array, just that each time with a larger window.
 ////
 
 
+/**
+ * Solution from the instructor.
+ */
+function minSubArrayLen_v2(nums, n) {
+  let sum = 0;
+  let l = 0;
+  let r = 0;
+  let minLen = Infinity;
+
+  while (l < nums.length) {
+    // if current window doesn't add up to the given sum then
+    // move the window to right
+    if (sum < n && r < nums.length) {
+      sum += nums[r];
+      r++;
+    }
+    // if current window adds up to at least the sum given then
+    // we can shrink the window
+    else if (sum >= n) {
+      minLen = Math.min(minLen, r - l);
+      sum -= nums[l];
+      l++;
+    }
+    // current total less than required total but we reach the end,
+    // need this or else we'll be in an infinite loop
+    else {
+      break;
+    }
+  }
+
+  return minLen === Infinity ? 0 : minLen;
+}
+//
+//
+// Much cleaner and elegant than mine. It uses less confusing conditions
+// and updates variables in less places.
+//
+// This solution sometimes cause ‘minLen’ to be incorrect until some
+// future iteration “fixes” it to a correct value that will work out in
+// the end. The same for ‘sum’, which sometimes gets back to less than
+// the previous ‘n’ value. But it is brilliant that it simplifies logic,
+// and in the end everything works out magnificently.
+////
+
 export {
   minSubArrayLen_v1,
+  minSubArrayLen_v2,
 };
 

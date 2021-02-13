@@ -1,5 +1,5 @@
 import {
-  minSubArrayLen_v1 as minSubArrayLen,
+  minSubArrayLen_v2 as minSubArrayLen,
 } from './min-subarray-len';
 
 describe('minSubArrayLen()', () => {
@@ -34,7 +34,7 @@ describe('minSubArrayLen()', () => {
       expect(
         minSubArrayLen([3, 1, 7, 11, 2, 9, 8, 21, 62, 33, 19], 52)
       ).toEqual(1);
-      //
+
       // 1 because 62 >= 52.
       //
     });
