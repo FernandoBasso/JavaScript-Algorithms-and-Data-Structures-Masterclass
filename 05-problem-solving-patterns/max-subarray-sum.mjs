@@ -7,7 +7,7 @@
 const log = console.log.bind(console);
 
 /**
- * Sums the maximum sum of n consecutive elements in arr.
+ * Finds the maximum sum of n consecutive elements in arr.
  *
  * Returns NaN with invalid input, null with empty array input, or the
  * max sum found.
