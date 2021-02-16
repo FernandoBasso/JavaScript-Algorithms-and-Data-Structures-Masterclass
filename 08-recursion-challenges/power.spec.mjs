@@ -17,9 +17,7 @@ describe('power()', () => {
   it('should raise n to the m power', () => {
     expect(power(3, 4)).toEqual(3 * 3 * 3 * 3); // 81
     expect(power(2, 5)).toEqual(2 * 2 * 2 * 2 * 2); // 32
-
     expect(power(2, 128)).toEqual(2 ** 128);
-
     expect(power(-2, 32)).toEqual((-2) ** 32);
   });
 });

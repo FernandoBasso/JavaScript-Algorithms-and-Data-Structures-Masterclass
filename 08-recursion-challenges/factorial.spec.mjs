@@ -3,6 +3,9 @@ import {
 } from './factorial';
 
 describe('fact()', () => {
+  it('should retur n1 when input is 0', () => {
+    expect(fact(0)).toEqual(1);
+  });
   it('should return 1 when input is 1', () => {
     expect(fact(1)).toEqual(1);
   });
