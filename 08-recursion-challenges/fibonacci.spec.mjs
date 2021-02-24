@@ -1,5 +1,6 @@
 import {
-  fib_v1 as fib,
+  // fib_v1, as fib,
+  fib_v2 as fib,
 } from './fibonacci';
 
 describe('fib()', () => {
