@@ -34,7 +34,8 @@ function fib_v1(nth) {
   return nums[nth - 1];
 }
 
-/** Returns the nth number in the fibonacci sequence.
+/**
+ * Returns the nth number in the fibonacci sequence.
  *
  * **NOTE**: It produces the fibonacci sequence as it goes, computing
  * only until necessary to return the correct nth element.
@@ -61,7 +62,17 @@ function fib_v2(nth, fibSeq = [1, 1]) {
   return fib_v2(nth, [...fibSeq, fibSeq[len - 1] + fibSeq[len - 2]]);
 }
 
+/**
+ * Solution from the instructor. This is the traditional recursive
+ * solution.
+ */
+function fib_v3(n) {
+  if (n < 2) return n;
+  return fib_v3(n - 1) + fib_v3(n - 2);
+}
+
 export {
   fib_v1,
   fib_v2,
+  fib_v3,
 };

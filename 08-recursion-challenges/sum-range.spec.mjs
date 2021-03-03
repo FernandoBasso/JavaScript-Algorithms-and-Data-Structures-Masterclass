@@ -1,7 +1,8 @@
 import {
   // sumRange_v1 as sumRange,
   // sumRange_v2 as sumRange,
-  sumRange_v3 as sumRange,
+  // sumRange_v3 as sumRange,
+  sumRange_v4 as sumRange,
 } from './sum-range';
 
 describe('sumRange()', () => {

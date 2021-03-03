@@ -66,9 +66,25 @@ function sumRange_v3(n) {
   return total;
 }
 
+/**
+ * Sums all numbers from 1 to n.
+ *
+ * ASSUME: `n >= 0`.
+ *
+ * Solution from the instructor.
+ *
+ * @param {number} n
+ * @return {number}
+ */
+function sumRange_v4(n) {
+  if (n === 0) return 0;
+  return n + sumRange_v4(n - 1);
+}
+
+
 export {
   sumRange_v1,
   sumRange_v2,
   sumRange_v3,
+  sumRange_v4,
 };
-
