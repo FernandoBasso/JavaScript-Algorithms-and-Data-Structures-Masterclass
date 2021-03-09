@@ -5,10 +5,12 @@
 // arrays and returns a new array with all values flattened.
 //
 
-const car = l => l[0];
-const cdr = l => l.slice(1);
-const isArray = o => Array.isArray(o);
-const isEmpty = l => l.length === 0;
+import {
+  car,
+  cdr,
+  isArray,
+  isEmpty,
+} from '../lib';
 
 /**
  * Flattens the input `arr`.
@@ -21,7 +23,7 @@ const isEmpty = l => l.length === 0;
  * @return {Array<T>
  */
 function flatten_v1(arr, acc = []) {
-  if (isEmpty(arr)) return acc;
+  if (isArray(arr) && isEmpty(arr)) return acc;
 
   if (isArray(arr)) {
     return flatten_v1(car(arr), flatten_v1(cdr(arr), acc));
@@ -42,7 +44,7 @@ function flatten_v1(arr, acc = []) {
  */
 function flatten_v2(lst) {
   return (function go(arr, acc) {
-    if (isEmpty(arr)) return acc;
+    if (isArray(arr) && isEmpty(arr)) return acc;
 
     if (isArray(arr))
       return go(car(arr), go(cdr(arr), acc));
