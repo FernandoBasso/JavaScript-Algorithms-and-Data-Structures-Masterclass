@@ -16,3 +16,8 @@ node_modules
 # JSDoc generated stuff.
 #
 docs
+
+##
+# My generated libjs.js file. See ‘genlibjs.sh’ for details.
+#
+libjs.js
