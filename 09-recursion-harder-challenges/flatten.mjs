@@ -37,7 +37,8 @@ function flatten_v1(arr, acc = []) {
  *
  * NOTE: Walks the array like a tree.
  *
- * This solution walks the array like a tree.
+ * This solution walks the array like a tree and it is a very Lisp- or
+ * Scheme-ish way of doing it.
  *
  * @param {Array<T>} arr
  * @return {Array<T>
@@ -53,7 +54,25 @@ function flatten_v2(lst) {
   })(lst, []);
 }
 
+/**
+ * Solution from the instructor.
+ */
+function flatten_v3(oldArr) {
+  var newArr = [];
+
+  for (var i = 0; i < oldArr.length; ++i) {
+    if (Array.isArray(oldArr[i])) {
+      newArr = newArr.concat(flatten_v3(oldArr[i]));
+    } else {
+      newArr.push(oldArr[i]);
+    }
+  }
+
+  return newArr;
+}
+
 export {
   flatten_v1,
   flatten_v2,
+  flatten_v3,
 };

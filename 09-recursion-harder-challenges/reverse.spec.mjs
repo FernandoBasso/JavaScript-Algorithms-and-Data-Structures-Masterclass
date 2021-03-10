@@ -1,6 +1,7 @@
 import {
   // reverse_v1 as reverse,
-  reverse_v2 as reverse,
+  // reverse_v2 as reverse,
+  reverse_v3 as reverse,
 } from './reverse';
 
 describe('reverse()', () => {

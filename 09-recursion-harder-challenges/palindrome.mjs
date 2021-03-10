@@ -35,17 +35,29 @@
  * @param {string} s
  * @return {boolean}
  */
-function isPalindrome(s) {
+function isPalindrome_v1(s) {
   const len = s.length;
 
   if (len === 0 || len === 1) return true;
 
   if (s[0] !== s[len - 1]) return false;
 
-  return isPalindrome(s.slice(1, len - 1));
+  return isPalindrome_v1(s.slice(1, len - 1));
+}
+
+/**
+ * Solution from the instructor with the first ‘if’ addapted by me so
+ * empty strings are considered palindrome too.
+ */
+function isPalindrome_v2(s) {
+  if (s.length <= 1) return true;
+  if (s.length === 2) return s[0] === s[1];
+  if (s[0] === s.slice(-1)) return isPalindrome_v2(s.slice(1, -1));
+  return false;
 }
 
 export {
-  isPalindrome,
+  isPalindrome_v1,
+  isPalindrome_v2,
 };
 

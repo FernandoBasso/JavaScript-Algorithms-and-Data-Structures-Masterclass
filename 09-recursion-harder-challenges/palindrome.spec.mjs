@@ -1,5 +1,6 @@
 import {
-  isPalindrome,
+  // isPalindrome_v1 as isPalindrome,
+  isPalindrome_v2 as isPalindrome,
 } from './palindrome';
 
 

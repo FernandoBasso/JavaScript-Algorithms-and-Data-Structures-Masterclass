@@ -1,6 +1,7 @@
 import {
   // flatten_v1 as flatten,
-  flatten_v2 as flatten,
+  // flatten_v2 as flatten,
+  flatten_v3 as flatten,
 } from './flatten'
 
 describe('flatten', () => {

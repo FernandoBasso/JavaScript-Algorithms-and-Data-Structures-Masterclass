@@ -50,7 +50,17 @@ function reverse_v2(s) {
   return reversed.join('');
 }
 
+/**
+ * Solution from the instructor. I did a solution similar to this one in
+ * Haskell once.
+ */
+function reverse_v3(s) {
+  if (s.length <= 1) return s;
+  return reverse_v3(s.slice(1)) + s[0];
+}
+
 export {
   reverse_v1,
   reverse_v2,
+  reverse_v3,
 };
