@@ -18,6 +18,7 @@ node_modules
 docs
 
 ##
-# My generated libjs.js file. See ‘genlibjs.sh’ for details.
+# My generated ‘lib’ files. See ‘genlibjs.sh’ for details.
 #
-libjs.js
+libjs.[jt]s
+libutils.[jt]s

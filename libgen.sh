@@ -7,7 +7,15 @@
 # in the online solution checkers.
 ##
 
-outfile='./libjs.js'
+if [ -z "$1" ] ; then
+	printf 2>&1 '%s\n' \
+		'Provide ‘js’ or ‘ts’ as the extension parameter.'
+	exit 1
+fi
+
+ext="$1"
+
+outfile="./libutils.$ext"
 
 ##
 # First, let's truncate the output file so we clear out contents from
@@ -32,7 +40,12 @@ outfile='./libjs.js'
 # The second sed invocation appends one empty line before and after each
 # file read so they do not get glued together in the output file.
 #
-for file in lib/*.mjs ; do
+
+files=(lib/*"$ext")
+
+for file in "${files[@]}" ; do
 	sed -n '\:^/\*\*:,\:^}$:p' < "$file" | \
 		sed -e '1 s/^/\n/' -e '$ s/$/\n/' >> "$outfile"
 done
+
+printf '\nSUCCESS: file ‘%s’ created!\n' "$outfile"

@@ -6,8 +6,9 @@
 
 - [Algorithms and Data Structures JavaScript Masterclass](#algorithms-and-data-structures-javascript-masterclass)
   - [Basic](#basic)
-  - [Unit Tests](#unit-tests)
-  - [Run standalone files](#run-standalone-files)
+  - [JavaScript Unit Tests](#javascript-unit-tests)
+    - [Run standalone files](#run-standalone-files)
+  - [Deno/TypeScript Unit Tests](#denotypescript-unit-tests)
   - [JSDoc](#jsdoc)
   - [TypeDoc](#typedoc)
   - [TODO](#todo)
@@ -23,7 +24,7 @@ nvm install --lts
 npm install
 ```
 
-## Unit Tests
+## JavaScript Unit Tests
 
 For all files:
 
@@ -52,13 +53,43 @@ npm run test -- --watch --silent
 
 **NOTE**: Replace `--watch` with `--watchAll` if not inside a Git repo.
 
-## Run standalone files
+### Run standalone files
 
 To test and see outputs apart from tests, run the standalone files:
 
 ```
 npm run file path/to/file.mjs
 ```
+
+
+## Deno/TypeScript Unit Tests
+
+It seems Deno does not (yet) provide a way to detect ‘.spec.ts’ as test files, so, let's do it from the shell for now.
+
+This works, but you can't see which test is from which file:
+
+	deno test ./**/*.spec.ts
+
+Or this, which let's us see each file, but then requires to start a new deno process for each file... Anyway, here it is:
+
+```shell
+files=(**/*.spec.ts)
+for f in "${files[@]}"; do deno test "$f"; done
+```
+
+Or without the array:
+
+```shell
+for f in **/*.spec.ts; do deno test "$f"; done
+```
+
+To run a single file:
+
+```shell
+deno test path/to/file.spec.ts
+```
+
+**NOTE**: As of now, Deno test runner does not have a watch mode.
 
 ## JSDoc
 
