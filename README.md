@@ -8,6 +8,8 @@
   - [Basic](#basic)
   - [Unit Tests](#unit-tests)
   - [Run standalone files](#run-standalone-files)
+  - [JSDoc](#jsdoc)
+  - [TypeDoc](#typedoc)
   - [TODO](#todo)
 
 ## Basic
@@ -58,13 +60,18 @@ To test and see outputs apart from tests, run the standalone files:
 npm run file path/to/file.mjs
 ```
 
+## JSDoc
+
 Generate/update docs:
 
 ```
 jsdoc -c jsdoc-config.js --recurse .
 ```
 
+## TypeDoc
+
+TypeScript documentation is not working as of now. I have found several open issues in which `typedoc` does _not_ ignore `node_modules` no matter what. So, for now, I'm just writing typescript docs without being able to generate docs and be sure I did it correctly. I sometimes paste some stuff in the [typedocs playground](https://microsoft.github.io/tsdoc/), though.
+
 ## TODO
 
 - [ ] There is always a `console.log` leaking in `./02-big-O/log-at-least-5.spec.mjs`. Even mocked, there are five logs at the terminal somehow.
-
