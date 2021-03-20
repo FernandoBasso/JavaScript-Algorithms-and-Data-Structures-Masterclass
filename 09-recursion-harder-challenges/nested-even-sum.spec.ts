@@ -50,7 +50,7 @@ Deno.test("should sum all number leaves", () => {
   };
 
   assertEquals(nestedEvenSum(o1), 2);
-  assertEquals(nestedEvenSum(o2), 2 + 4 + + 6); // 21
+  assertEquals(nestedEvenSum(o2), 2 + 4 + 6);
 });
 
 Deno.test("should sum the three random object leaves", () => {
