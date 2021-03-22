@@ -1,5 +1,8 @@
-import { assertEquals } from "../../deps.ts";
-import { isArray } from "../isArray.ts";
+import {
+  assertEquals,
+} from "/deps.ts";
+
+import { isArray } from "./isArray.ts";
 
 Deno.test("should return false when param is not of type array", () => {
   [

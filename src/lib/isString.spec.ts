@@ -1,5 +1,8 @@
-import { assertEquals } from "../../deps.ts";
-import { isString } from "../isString.ts";
+import {
+  assertEquals,
+} from "/deps.ts";
+
+import { isString } from "./isString.ts";
 
 Deno.test("should return false input is NOT of type string", () => {
   [

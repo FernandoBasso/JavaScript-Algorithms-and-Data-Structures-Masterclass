@@ -1,8 +1,8 @@
 import {
   assertEquals,
-} from "../../deps.ts";
+} from "/deps.ts";
 
-import { isObject } from "../isObject.ts";
+import { isObject } from "./isObject.ts";
 
 Deno.test("should return false with non-object values", () => {
   assertEquals(isObject(undefined), false);

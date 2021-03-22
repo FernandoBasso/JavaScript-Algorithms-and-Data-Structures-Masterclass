@@ -1,9 +1,9 @@
 import {
   assertEquals,
   assertThrows,
-} from "../../deps.ts";
+} from "/deps.ts";
 
-import { isEmpty } from "../isEmpty.ts";
+import { isEmpty } from "./isEmpty.ts";
 
 Deno.test("should trow TypeError when param type is invalid", () => {
   [

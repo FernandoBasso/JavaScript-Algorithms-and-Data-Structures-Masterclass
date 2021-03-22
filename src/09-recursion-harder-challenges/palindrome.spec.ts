@@ -1,10 +1,10 @@
 import {
   assertEquals,
-} from '../deps.ts';
+} from "/deps.ts";
 
 import {
   isPalindrome,
-} from './palindrome.ts';
+} from "/src/09-recursion-harder-challenges/palindrome.ts";
 
 Deno.test('should return false for non-palindromes', () => {
   assertEquals(isPalindrome('awesome'), false);

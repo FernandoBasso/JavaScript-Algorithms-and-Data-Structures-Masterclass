@@ -7,7 +7,10 @@
 
 import {
   isEmpty,
-} from "../lib/index.ts";
+  car,
+  cdr,
+  upcase,
+} from "/src/lib/index.ts";
 
 /**
  * Capitalize all characters of each word in `arr`.
@@ -21,7 +24,10 @@ function capitalizeWords(arr: Array<string>): Array<string> {
     acc: Array<string>,
   ): Array<string> {
     if (isEmpty(lst)) return acc;
-    return run(lst.slice(1), [...acc, lst[0].toUpperCase()]);
+    return run(
+      cdr<string>(lst) as Array<string>,
+      [...acc, upcase(car(lst))],
+    );
     })(arr, []);
 }
 

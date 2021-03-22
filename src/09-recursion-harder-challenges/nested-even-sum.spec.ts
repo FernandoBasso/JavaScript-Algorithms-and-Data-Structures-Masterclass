@@ -1,8 +1,10 @@
 import {
   assertEquals,
-} from '../deps.ts';
+} from "/deps.ts";
 
-import { nestedEvenSum } from './nested-even-sum.ts';
+import {
+  nestedEvenSum,
+} from "/src/09-recursion-harder-challenges/nested-even-sum.ts";
 
 const obj1 = {
   outer: 2,

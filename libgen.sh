@@ -41,7 +41,7 @@ outfile="./libutils.$ext"
 # file read so they do not get glued together in the output file.
 #
 
-files=(lib/*"$ext")
+files=(src/lib/*"$ext")
 
 for file in "${files[@]}" ; do
 	sed -n '\:^/\*\*:,\:^}$:p' < "$file" | \
@@ -49,3 +49,4 @@ for file in "${files[@]}" ; do
 done
 
 printf '\nSUCCESS: file ‘%s’ created!\n' "$outfile"
+

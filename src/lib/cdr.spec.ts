@@ -1,21 +1,21 @@
 import {
   assertThrows,
   assertEquals,
-} from "../../deps.ts";
+} from "/deps.ts";
 
-import { cdr } from "../cdr.ts";
+import { cdr } from "./cdr.ts";
 
 Deno.test("should throw ‘TypeError’ when not an array", () => {
   assertThrows(
     () => cdr(null as unknown as Array<unknown>),
     TypeError,
-    "cdr(): parameter must be of type Array"
+    "cdr(): invalid parameter type"
   );
 
   assertThrows(
     () => cdr({} as unknown as Array<unknown>),
     TypeError,
-    "cdr(): parameter must be of type Array"
+    "cdr(): invalid parameter type"
   );
 });
 
@@ -23,7 +23,13 @@ Deno.test("should throw ‘TypeError’ when array is empty", () => {
   assertThrows(
     () => cdr([]),
     TypeError,
-    "cdr(): cannot get cdr/tail of empty Array",
+    "cdr(): cannot get cdr/tail of empty array or string",
+  );
+
+  assertThrows(
+    () => cdr(""),
+    TypeError,
+    "cdr(): cannot get cdr/tail of empty array or string",
   );
 });
 

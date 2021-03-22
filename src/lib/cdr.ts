@@ -1,14 +1,15 @@
 import {
   isArray,
+  isString,
   isEmpty,
 } from "./index.ts";
 
 /**
- * Returns the first element of an array.
+ * Returns a copy of `lst` without the first element.
  *
- * @param {Array<T>} lst
- * @return {T}
- * @throws {TypeError} car(): parameter must be of type Array
+ * @param {Array<T> | string} lst - The input array or string.
+ * @return The input list without the first element.
+ * @throws {TypeError} car(): parameter must be array or string
  *
  * @example
  * car([1, 2, 3]);
@@ -23,12 +24,12 @@ import {
  * // → TypeError exception
  */
 function cdr<T>(lst: Array<T> | string): Array<T> | string {
-  if (!isArray(lst))
-    throw new TypeError("cdr(): parameter must be of type Array");
+  if (!isArray(lst) && !isString(lst))
+    throw new TypeError("cdr(): invalid parameter type");
 
   if (isEmpty(lst))
     throw new TypeError(
-      "cdr(): cannot get cdr/tail of empty Array"
+      "cdr(): cannot get cdr/tail of empty array or string"
     );
 
   return lst.slice(1);
