@@ -2,7 +2,7 @@ import {
   assertEquals,
 } from "../deps.ts";
 
-import { capitalizeWords } from "./capitalizeWords.ts";
+import { capitalizeWords } from "./capitalize-words.ts";
 
 Deno.test("should return empty array when input is empty array", () => {
   assertEquals(capitalizeWords([]), []);

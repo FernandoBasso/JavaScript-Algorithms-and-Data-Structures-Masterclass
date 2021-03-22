@@ -1,3 +1,5 @@
+export { car, head } from "./car.ts";
+export { cdr, tail } from "./cdr.ts";
 export { isNumber } from "./isNumber.ts";
 export { isString } from "./isString.ts";
 export { isArray } from "./isArray.ts";
