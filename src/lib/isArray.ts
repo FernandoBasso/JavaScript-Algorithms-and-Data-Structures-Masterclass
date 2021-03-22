@@ -1,4 +1,3 @@
-
 /**
  * Checks whether `val` is of type Array.
  *

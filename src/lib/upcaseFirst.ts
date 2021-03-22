@@ -1,9 +1,4 @@
-import {
-  isEmpty,
-  car,
-  cdr,
-} from "./index.ts";
-
+import { car, cdr, isEmpty } from "./index.ts";
 
 /**
  * Capitalize the first char of `s`.
@@ -16,6 +11,4 @@ function upcaseFirst(s: string): string {
   return (car(s) as string).toUpperCase() + cdr(s) as string;
 }
 
-export {
-  upcaseFirst,
-};
+export { upcaseFirst };

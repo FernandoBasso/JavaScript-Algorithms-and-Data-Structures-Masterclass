@@ -1,7 +1,4 @@
-import {
-  isArray,
-  isEmpty,
-} from './';
+import { isArray, isEmpty } from "./";
 
 /**
  * Returns the first element of an array.
@@ -23,17 +20,17 @@ import {
  * // → TypeError exception
  */
 function car(lst) {
-  if (!isArray(lst))
-    throw new TypeError('car(): parameter must be of type Array');
+  if (!isArray(lst)) {
+    throw new TypeError("car(): parameter must be of type Array");
+  }
 
-  if (isEmpty(lst))
+  if (isEmpty(lst)) {
     throw new TypeError(
-      'car(): cannot get car/head of empty Array'
+      "car(): cannot get car/head of empty Array",
     );
+  }
 
   return lst[0];
 }
 
-export {
-  car,
-};
+export { car };

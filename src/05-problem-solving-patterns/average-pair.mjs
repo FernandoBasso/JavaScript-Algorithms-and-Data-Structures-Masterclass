@@ -48,8 +48,8 @@ function avgPair_v1(arr, targetAvg) {
   if (arr.length === 0) return false;
 
   let l = 0,
-      r = arr.length - 1,
-      avg;
+    r = arr.length - 1,
+    avg;
 
   while (l < r) {
     avg = (arr[l] + arr[r]) / 2;
@@ -63,6 +63,4 @@ function avgPair_v1(arr, targetAvg) {
   return false;
 }
 
-export {
-  avgPair_v1,
-};
+export { avgPair_v1 };

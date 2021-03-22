@@ -3,10 +3,10 @@ import {
   // sumRange_v2 as sumRange,
   // sumRange_v3 as sumRange,
   sumRange_v4 as sumRange,
-} from './sum-range';
+} from "./sum-range";
 
-describe('sumRange()', () => {
-  it('should return the correct sum', () => {
+describe("sumRange()", () => {
+  it("should return the correct sum", () => {
     expect(sumRange(0)).toEqual(0);
     expect(sumRange(1)).toEqual(1);
     expect(sumRange(2)).toEqual(1 + 2);

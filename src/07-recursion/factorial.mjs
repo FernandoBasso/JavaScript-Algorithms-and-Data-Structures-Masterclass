@@ -11,6 +11,4 @@ function fact(x) {
   return x * fact(x - 1);
 }
 
-export {
-  fact,
-};
+export { fact };

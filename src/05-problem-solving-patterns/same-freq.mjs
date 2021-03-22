@@ -35,8 +35,9 @@ function sameFreq(xs, ys) {
 
   const freqXs = {};
 
-  for (let x of strXs)
+  for (let x of strXs) {
     freqXs[x] = (freqXs[x] || 0) + 1;
+  }
 
   for (let y of strYs) {
     if (!freqXs[y]) return false; // <1>
@@ -73,4 +74,3 @@ function sameFreq(xs, ys) {
 //
 
 export { sameFreq };
-

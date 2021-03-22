@@ -5,7 +5,6 @@
 // returns a new string in reverse.
 //
 
-
 /**
  * Reverses a reversed version of `s`.
  *
@@ -20,10 +19,9 @@
  */
 function reverse_v1(s, acc = []) {
   const len = s.length;
-  if (len === 0) return acc.join('');
+  if (len === 0) return acc.join("");
   return reverse_v1(s.slice(0, len - 1), [...acc, s[len - 1]]);
 }
-
 
 /**
  * Reverses a reversed version of `s`.
@@ -45,9 +43,9 @@ function reverse_v2(s) {
 
   reversed.push(s[len - 1]);
 
-  reversed = reversed.concat(reverse_v2(s.slice(0, len - 1)))
+  reversed = reversed.concat(reverse_v2(s.slice(0, len - 1)));
 
-  return reversed.join('');
+  return reversed.join("");
 }
 
 /**
@@ -59,8 +57,4 @@ function reverse_v3(s) {
   return reverse_v3(s.slice(1)) + s[0];
 }
 
-export {
-  reverse_v1,
-  reverse_v2,
-  reverse_v3,
-};
+export { reverse_v1, reverse_v2, reverse_v3 };

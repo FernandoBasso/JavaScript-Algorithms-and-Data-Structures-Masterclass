@@ -16,6 +16,6 @@ export function logAtMost5(n) {
   return i;
 }
 
-if (process.env.ENV !== 'test') {
+if (process.env.ENV !== "test") {
   logAtMost5(3);
 }

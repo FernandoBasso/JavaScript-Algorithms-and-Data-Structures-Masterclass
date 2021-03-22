@@ -1,4 +1,3 @@
-
 /**
  * Checks whether the input is a string.
  *
@@ -6,5 +5,5 @@
  * @return {boolean}
  */
 export function isString(val) {
-  return !!(typeof val === 'string' || val instanceof String);
+  return !!(typeof val === "string" || val instanceof String);
 }

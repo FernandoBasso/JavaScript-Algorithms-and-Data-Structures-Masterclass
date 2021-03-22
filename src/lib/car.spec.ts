@@ -1,7 +1,4 @@
-import {
-  assertThrows,
-  assertEquals,
-} from "/deps.ts";
+import { assertEquals, assertThrows } from "/deps.ts";
 
 import { car } from "./car.ts";
 
@@ -42,5 +39,6 @@ Deno.test("should return the first element", () => {
   assertEquals(car([4, -13, -9, 0, 7]), 4);
   assertEquals(
     car([["x", "y", "z"], ["a", "b"], ["j"]]),
-    ["x", "y", "z"]);
+    ["x", "y", "z"],
+  );
 });

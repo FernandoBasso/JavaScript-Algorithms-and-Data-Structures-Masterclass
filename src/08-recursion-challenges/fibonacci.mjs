@@ -71,8 +71,4 @@ function fib_v3(n) {
   return fib_v3(n - 1) + fib_v3(n - 2);
 }
 
-export {
-  fib_v1,
-  fib_v2,
-  fib_v3,
-};
+export { fib_v1, fib_v2, fib_v3 };

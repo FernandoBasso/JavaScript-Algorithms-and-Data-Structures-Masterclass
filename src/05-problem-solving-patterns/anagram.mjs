@@ -45,7 +45,7 @@
  * @return {boolean}
  */
 function isString(val) {
-  return !!(typeof val === 'string' || val instanceof String);
+  return !!(typeof val === "string" || val instanceof String);
 }
 
 /**
@@ -73,8 +73,9 @@ function isAnagram(s1, s2) {
 
   const freqsS1 = {};
 
-  for (let c of s1)
+  for (let c of s1) {
     freqsS1[c] = (freqsS1[c] || 0) + 1;
+  }
 
   for (let c of s2) {
     if (!freqsS1[c]) return false; // <1>

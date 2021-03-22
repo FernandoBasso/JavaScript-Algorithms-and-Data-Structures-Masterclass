@@ -81,9 +81,4 @@ function collectOdds_v3(xs) {
 //   [ 1, 3, 5, 7 ]
 ////
 
-
-export {
-  collectOdds_v1,
-  collectOdds_v2,
-  collectOdds_v3
-};
+export { collectOdds_v1, collectOdds_v2, collectOdds_v3 };

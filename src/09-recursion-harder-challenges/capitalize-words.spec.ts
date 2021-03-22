@@ -1,6 +1,4 @@
-import {
-  assertEquals,
-} from "/deps.ts";
+import { assertEquals } from "/deps.ts";
 
 import {
   capitalizeWords,
@@ -18,7 +16,6 @@ Deno.test("should capitalize each string in input array", () => {
   assertEquals(capitalizeWords(["i"]), ["I"]);
   assertEquals(
     capitalizeWords(["i", "am", "practicing", "recursion"]),
-    ["I", "AM", "PRACTICING", "RECURSION"]
+    ["I", "AM", "PRACTICING", "RECURSION"],
   );
 });
-

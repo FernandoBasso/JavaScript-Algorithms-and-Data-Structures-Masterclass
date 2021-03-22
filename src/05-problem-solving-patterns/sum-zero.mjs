@@ -59,13 +59,15 @@ function sumZero_v2(ints) {
   while (l !== r) {
     sum = ints[l] + ints[r];
 
-    if (sum === 0)
+    if (sum === 0) {
       return [ints[l], ints[r]];
+    }
 
-    if (sum < 0)
+    if (sum < 0) {
       ++l;
-    else
+    } else {
       --r;
+    }
   }
 }
 
@@ -87,4 +89,3 @@ export { sumZero_v2 as sumZero };
  * zeroes. For example, [-1, 0, 0, 2, 3], then we would find a pair
  * [0, 0] which when summed is zero, and it would be correct.
  */
-

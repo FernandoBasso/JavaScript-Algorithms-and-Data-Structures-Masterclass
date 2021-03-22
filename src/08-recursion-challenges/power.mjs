@@ -12,6 +12,4 @@ function power(b, e) {
   return b * power(b, e - 1);
 }
 
-export {
-  power,
-};
+export { power };

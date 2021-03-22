@@ -30,9 +30,7 @@ function same1(xs, ys) {
   }
 
   return true;
-};
-
-//
+}//
 // Why is it O(n ^ 2) if we have only one loop?
 // Because ‘indexOf’ itself “loops”. We actually have to looping
 // constructs being executed.
@@ -41,17 +39,20 @@ function same1(xs, ys) {
 /**
  * TIME COMPLEXITY: O(n)
  */
+
 function same2(xs, ys) {
   if (xs.length !== ys.length) return false;
 
   const freqXs = {};
   const freqYs = {};
 
-  for (let x of xs)
+  for (let x of xs) {
     freqXs[x] = (freqXs[x] || 0) + 1;
+  }
 
-  for (let y of ys)
+  for (let y of ys) {
     freqYs[y] = (freqYs[y] || 0) + 1;
+  }
 
   for (let k in freqXs) {
     if (!(k ** 2 in freqYs)) return false;
@@ -59,9 +60,7 @@ function same2(xs, ys) {
   }
 
   return true;
-};
-
-//
+}//
 // Three loops is much better than a loop inside a loop.
 // • Two nested loops: O(n ^ 2) -- quadratic.
 // • Three loops one after the other: O(n).
@@ -70,6 +69,4 @@ function same2(xs, ys) {
 // time.
 //
 
-export {
-  same2 as same,
-};
+export { same2 as same };

@@ -16,6 +16,6 @@ export function logAtLeast5(n) {
   return i;
 }
 
-if (process.env.ENV !== 'test') {
+if (process.env.ENV !== "test") {
   logAtLeast5(3);
 }

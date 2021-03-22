@@ -1,6 +1,4 @@
-import {
-  assertEquals,
-} from "/deps.ts";
+import { assertEquals } from "/deps.ts";
 
 import { upcase } from "./upcase.ts";
 
@@ -11,4 +9,3 @@ Deno.test("should keep already upercased letters intact", () => {
 Deno.test("should uppercase the input", () => {
   assertEquals(upcase("Résumé"), "RÉSUMÉ");
 });
-

@@ -43,8 +43,7 @@ function isSubSeq_v1(sub, str) {
     if (sub[l] === str[r]) { // <2>
       ++l;
       ++r;
-    }
-    else { // <3>
+    } else { // <3>
       ++r;
     }
   }
@@ -72,7 +71,6 @@ function isSubSeq_v1(sub, str) {
 // string, or arrays of matched values. Only two extra variables are
 // used inside the function.
 ////////////////////////////////////////////////////////////////////////
-
 
 /**
  * Checks whether `sub` is a subsequence of `str`.
@@ -118,7 +116,4 @@ function isSubSeq_v2(sub, str) {
 // Very well designed solution indeed!
 ////////////////////////////////////////////////////////////////////////
 
-export {
-  isSubSeq_v1,
-  isSubSeq_v2,
-};
+export { isSubSeq_v1, isSubSeq_v2 };

@@ -67,9 +67,11 @@ function areThereDups_v2(...args) {
 
   let l = 0, r = args.length - 1;
 
-  while (l < r) // <1>
-    if (args[l++] === args[r])
+  while (l < r) { // <1>
+    if (args[l++] === args[r]) {
       return true;
+    }
+  }
 
   return false;
 }
@@ -104,9 +106,9 @@ function areThereDups_v3(...args) {
   let start = 0;
   let next = 1;
 
-  while(next < args.length) {
+  while (next < args.length) {
     if (args[start] === args[next]) {
-        return true;
+      return true;
     }
 
     start++;
@@ -137,10 +139,4 @@ function areThereDups_v4(...args) {
   return new Set(args).size !== args.length;
 }
 
-export {
-  areThereDups_v1,
-  areThereDups_v2,
-  areThereDups_v3,
-  areThereDups_v4,
-};
-
+export { areThereDups_v1, areThereDups_v2, areThereDups_v3, areThereDups_v4 };

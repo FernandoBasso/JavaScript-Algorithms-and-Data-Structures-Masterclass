@@ -1,4 +1,3 @@
-
 /**
  * Checks whether `param` is of type Array.
  *
@@ -9,6 +8,4 @@ function isArray(param) {
   return Array.isArray(param);
 }
 
-export {
-  isArray,
-};
+export { isArray };

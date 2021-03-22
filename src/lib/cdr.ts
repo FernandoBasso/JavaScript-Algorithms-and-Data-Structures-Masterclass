@@ -1,8 +1,4 @@
-import {
-  isArray,
-  isString,
-  isEmpty,
-} from "./index.ts";
+import { isArray, isEmpty, isString } from "./index.ts";
 
 /**
  * Returns a copy of `lst` without the first element.
@@ -24,13 +20,15 @@ import {
  * // → TypeError exception
  */
 function cdr<T>(lst: Array<T> | string): Array<T> | string {
-  if (!isArray(lst) && !isString(lst))
+  if (!isArray(lst) && !isString(lst)) {
     throw new TypeError("cdr(): invalid parameter type");
+  }
 
-  if (isEmpty(lst))
+  if (isEmpty(lst)) {
     throw new TypeError(
-      "cdr(): cannot get cdr/tail of empty array or string"
+      "cdr(): cannot get cdr/tail of empty array or string",
     );
+  }
 
   return lst.slice(1);
 }

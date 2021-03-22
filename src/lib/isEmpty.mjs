@@ -1,7 +1,4 @@
-import {
-  isArray,
-  isString,
-} from './';
+import { isArray, isString } from "./";
 
 /**
  * Checks whether `lst` array is empty.
@@ -11,14 +8,13 @@ import {
  * @throws {TypeError} isEmpty(): parameter must be of type Array
  */
 function isEmpty(lst) {
-  if (!isArray(lst) && !isString(lst))
+  if (!isArray(lst) && !isString(lst)) {
     throw new TypeError(
-      'isEmpty(): parameter must be of type Array or String'
+      "isEmpty(): parameter must be of type Array or String",
     );
+  }
 
   return lst.length === 0;
 }
 
-export {
-  isEmpty,
-}
+export { isEmpty };

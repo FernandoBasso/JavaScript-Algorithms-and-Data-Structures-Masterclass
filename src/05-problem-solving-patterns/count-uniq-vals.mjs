@@ -19,8 +19,9 @@ function countUniqVals_v1(nums) {
   // <1>
   let i = 0, count = 1;
 
-  for (; i < nums.length - 1; ++i)
+  for (; i < nums.length - 1; ++i) {
     if (nums[i] !== nums[i + 1]) ++count; // <2>
+  }
 
   return count;
 }
@@ -43,7 +44,6 @@ function countUniqVals_v1(nums) {
 // loop in case we are sure to have at least two values in the array and
 // that comparison with undefined would not happen.
 //
-
 
 /**
  * Count unique values in the input array of numbers.
@@ -115,4 +115,3 @@ function countUniqVals_v2(nums) {
 //
 
 export { countUniqVals_v2 as countUniqVals };
-

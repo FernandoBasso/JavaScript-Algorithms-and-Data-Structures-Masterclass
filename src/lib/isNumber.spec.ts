@@ -1,14 +1,12 @@
-import {
-  assertEquals,
-} from "/deps.ts";
+import { assertEquals } from "/deps.ts";
 
 import { isNumber } from "./isNumber.ts";
 
 Deno.test("should return false for non-number values", () => {
   assertEquals(isNumber(undefined), false);
   assertEquals(isNumber(null), false);
-  assertEquals(isNumber('5k'), false);
-  assertEquals(isNumber(new Number('5k')), false);
+  assertEquals(isNumber("5k"), false);
+  assertEquals(isNumber(new Number("5k")), false);
 });
 
 Deno.test("should return true for numbers", () => {

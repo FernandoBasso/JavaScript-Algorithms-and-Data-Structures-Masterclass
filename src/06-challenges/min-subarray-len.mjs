@@ -90,7 +90,6 @@ function minSubArrayLen_v1(nums, n) {
 // the beginning of the array, just that each time with a larger window.
 ////
 
-
 /**
  * Solution from the instructor.
  */
@@ -106,15 +105,13 @@ function minSubArrayLen_v2(nums, n) {
     if (sum < n && r < nums.length) {
       sum += nums[r];
       r++;
-    }
-    // if current window adds up to at least the sum given then
+    } // if current window adds up to at least the sum given then
     // we can shrink the window
     else if (sum >= n) {
       minLen = Math.min(minLen, r - l);
       sum -= nums[l];
       l++;
-    }
-    // current total less than required total but we reach the end,
+    } // current total less than required total but we reach the end,
     // need this or else we'll be in an infinite loop
     else {
       break;
@@ -135,8 +132,4 @@ function minSubArrayLen_v2(nums, n) {
 // and in the end everything works out magnificently.
 ////
 
-export {
-  minSubArrayLen_v1,
-  minSubArrayLen_v2,
-};
-
+export { minSubArrayLen_v1, minSubArrayLen_v2 };

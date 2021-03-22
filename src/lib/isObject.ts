@@ -9,7 +9,7 @@
  * @returns A boolean indicating if `val` is an object.
  */
 function isObject(val: unknown): boolean {
-  return val !== null && !Array.isArray(val) && typeof val === 'object';
+  return val !== null && !Array.isArray(val) && typeof val === "object";
 }
 
 export { isObject };

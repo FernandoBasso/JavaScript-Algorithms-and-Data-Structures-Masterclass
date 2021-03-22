@@ -1,6 +1,6 @@
 function countdown(num) {
   if (num <= 0) {
-    console.info('All done!');
+    console.info("All done!");
     return;
   }
 
@@ -8,7 +8,4 @@ function countdown(num) {
   return countdown(--num);
 }
 
-
-export {
-  countdown,
-};
+export { countdown };

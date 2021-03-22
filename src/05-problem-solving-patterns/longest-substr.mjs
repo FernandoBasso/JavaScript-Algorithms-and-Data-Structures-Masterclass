@@ -81,8 +81,4 @@ function findLongestSubstr_v2(str) {
 // than mine 🥲.
 ////
 
-export {
-  findLongestSubstr_v1,
-  findLongestSubstr_v2,
-};
-
+export { findLongestSubstr_v1, findLongestSubstr_v2 };

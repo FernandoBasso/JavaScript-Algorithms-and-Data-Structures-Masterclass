@@ -5,12 +5,7 @@
  * strings, capitalize the first letter of each string in the array.
  */
 
-import {
-  car,
-  cdr,
-  isEmpty,
-  upcaseFirst,
-} from '../lib';
+import { car, cdr, isEmpty, upcaseFirst } from "../lib";
 
 /**
  * Capitalize first char of each string in `strs`.
@@ -39,14 +34,10 @@ function capitalizeFirst_v1(strs, acc = []) {
  * @return {Array<string>
  */
 function capitalizeFirst_v2(strs) {
-  return (function loop (los, acc) {
+  return (function loop(los, acc) {
     if (isEmpty(los)) return acc;
     return [...acc, upcaseFirst(car(los)), ...loop(cdr(los), acc)];
   })(strs, []);
 }
 
-export {
-  capitalizeFirst_v1,
-  capitalizeFirst_v2,
-};
-
+export { capitalizeFirst_v1, capitalizeFirst_v2 };

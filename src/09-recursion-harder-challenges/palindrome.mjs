@@ -56,8 +56,4 @@ function isPalindrome_v2(s) {
   return false;
 }
 
-export {
-  isPalindrome_v1,
-  isPalindrome_v2,
-};
-
+export { isPalindrome_v1, isPalindrome_v2 };

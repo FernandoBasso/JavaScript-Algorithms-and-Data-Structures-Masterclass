@@ -5,12 +5,7 @@
 // arrays and returns a new array with all values flattened.
 //
 
-import {
-  car,
-  cdr,
-  isArray,
-  isEmpty,
-} from '../lib';
+import { car, cdr, isArray, isEmpty } from "../lib";
 
 /**
  * Flattens the input `arr`.
@@ -47,8 +42,9 @@ function flatten_v2(lst) {
   return (function go(arr, acc) {
     if (isArray(arr) && isEmpty(arr)) return acc;
 
-    if (isArray(arr))
+    if (isArray(arr)) {
       return go(car(arr), go(cdr(arr), acc));
+    }
 
     return [arr, ...acc];
   })(lst, []);
@@ -71,8 +67,4 @@ function flatten_v3(oldArr) {
   return newArr;
 }
 
-export {
-  flatten_v1,
-  flatten_v2,
-  flatten_v3,
-};
+export { flatten_v1, flatten_v2, flatten_v3 };

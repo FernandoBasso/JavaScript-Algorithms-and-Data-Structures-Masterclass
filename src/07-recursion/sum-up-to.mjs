@@ -11,6 +11,4 @@ function sumFrom1To(x) {
   return x + sumFrom1To(x - 1);
 }
 
-export {
-  sumFrom1To,
-};
+export { sumFrom1To };

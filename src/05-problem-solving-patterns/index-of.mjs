@@ -16,12 +16,12 @@
 function getIndexOf_v1(elem, arr) {
   if (!Array.isArray(arr)) return NaN;
 
-  for (let idx = 0; idx < arr.length; ++idx)
+  for (let idx = 0; idx < arr.length; ++idx) {
     if (elem === arr[idx]) return idx;
+  }
 
   return -1;
 }
-
 
 /**
  * Finds the index of elem in arr. Returns -1 if not found.
@@ -43,12 +43,13 @@ function getIndexOf_v2(val, arr) {
   while (min <= max) {
     mid = Math.floor((min + max) / 2);
 
-    if (arr[mid] < val)
+    if (arr[mid] < val) {
       min = mid + 1;
-    else if (arr[mid] > val)
+    } else if (arr[mid] > val) {
       max = mid - 1;
-    else
+    } else {
       return mid;
+    }
   }
 
   return -1;

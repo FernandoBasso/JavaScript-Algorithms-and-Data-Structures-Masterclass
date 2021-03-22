@@ -21,13 +21,13 @@
  * @return {object}
  */
 function countAlphaNum_0(str) {
-  if (typeof str !== 'string' && !(str instanceof String)) {
-    throw new TypeError('Input must be a string');
+  if (typeof str !== "string" && !(str instanceof String)) {
+    throw new TypeError("Input must be a string");
   }
 
   if (str.length === 0) return {};
 
-  return [...str.replace(/[^a-zA-z0-9]/g, '')].reduce((acc, chr) => {
+  return [...str.replace(/[^a-zA-z0-9]/g, "")].reduce((acc, chr) => {
     const k = chr.toLowerCase(chr);
 
     if (acc.hasOwnProperty(k)) {
@@ -45,8 +45,8 @@ function countAlphaNum_0(str) {
  * input myself.
  */
 function countAlphaNum_1(str) {
-  if (typeof str !== 'string' && !(str instanceof String)) {
-    throw new TypeError('Input must be a string');
+  if (typeof str !== "string" && !(str instanceof String)) {
+    throw new TypeError("Input must be a string");
   }
 
   if (str.length === 0) return {};
@@ -70,12 +70,12 @@ function countAlphaNum_1(str) {
 // characters.
 //
 
-const CHAR_CODE_a = 'a'.charCodeAt(0); // 97
-const CHAR_CODE_z = 'z'.charCodeAt(0); // 122
-const CHAR_CODE_A = 'A'.charCodeAt(0); // 65
-const CHAR_CODE_Z = 'Z'.charCodeAt(0); // 90
-const CHAR_CODE_0 = '0'.charCodeAt(0); // 48
-const CHAR_CODE_9 = '9'.charCodeAt(0); // 57
+const CHAR_CODE_a = "a".charCodeAt(0); // 97
+const CHAR_CODE_z = "z".charCodeAt(0); // 122
+const CHAR_CODE_A = "A".charCodeAt(0); // 65
+const CHAR_CODE_Z = "Z".charCodeAt(0); // 90
+const CHAR_CODE_0 = "0".charCodeAt(0); // 48
+const CHAR_CODE_9 = "9".charCodeAt(0); // 57
 
 /**
  * Verifies if a character is a letter or digit.
@@ -98,8 +98,8 @@ function isAlphaNum(chr) {
  * @return {object}
  */
 function countAlphaNum_2(str) {
-  if (typeof str !== 'string' && !(str instanceof String)) {
-    throw new TypeError('Input must be a string');
+  if (typeof str !== "string" && !(str instanceof String)) {
+    throw new TypeError("Input must be a string");
   }
 
   if (str.length === 0) return {};
@@ -116,6 +116,4 @@ function countAlphaNum_2(str) {
   return freq;
 }
 
-export {
-  countAlphaNum_2 as countAlphaNum
-}
+export { countAlphaNum_2 as countAlphaNum };

@@ -1,7 +1,4 @@
-import {
-  isEmpty,
-} from '../lib';
-
+import { isEmpty } from "../lib";
 
 /**
  * Capitalize the first char of `s`.
@@ -12,10 +9,8 @@ import {
  * @return {string}
  */
 function upcaseFirst(s) {
-  if (isEmpty(s)) return '';
+  if (isEmpty(s)) return "";
   return s[0].toUpperCase() + s.slice(1);
 }
 
-export {
-  upcaseFirst,
-};
+export { upcaseFirst };

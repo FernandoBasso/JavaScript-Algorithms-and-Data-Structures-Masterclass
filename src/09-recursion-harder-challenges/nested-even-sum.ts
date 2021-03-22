@@ -5,10 +5,7 @@
 // all even numbers in an object which may contain nested objects.
 //
 
-import {
-  isNumber,
-  isObject,
-} from "../lib/index.ts";
+import { isNumber, isObject } from "../lib/index.ts";
 
 const isEven = (n: number) => n % 2 === 0;
 
@@ -41,18 +38,17 @@ function tgIsNum(v: unknown): v is number {
  */
 function nestedEvenSum(obj: UnkRec): number {
   return (function go(o: UnkRec, acc: number): number {
-    Object.keys(o).forEach(k => {
+    Object.keys(o).forEach((k) => {
       const v = o[k];
-      if (isObject(v))
+      if (isObject(v)) {
         acc = go(v as UnkRec, acc);
-      else if (tgIsNum(v) && isEven(v))
+      } else if (tgIsNum(v) && isEven(v)) {
         acc += v;
+      }
     });
 
     return acc;
   })(obj, 0);
 }
 
-export {
-  nestedEvenSum,
-};
+export { nestedEvenSum };

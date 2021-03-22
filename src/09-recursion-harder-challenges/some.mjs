@@ -37,6 +37,4 @@ function some_v1(arr, fn) {
   return some_v1(arr.slice(1), fn);
 }
 
-export {
-  some_v1,
-};
+export { some_v1 };

@@ -1,10 +1,8 @@
-import {
-  minSubArrayLen_v2 as minSubArrayLen,
-} from './min-subarray-len';
+import { minSubArrayLen_v2 as minSubArrayLen } from "./min-subarray-len";
 
-describe('minSubArrayLen()', () => {
-  describe('when the input array is empty', () => {
-    it('should return 0', () => {
+describe("minSubArrayLen()", () => {
+  describe("when the input array is empty", () => {
+    it("should return 0", () => {
       expect(minSubArrayLen([], 1)).toEqual(0);
       expect(minSubArrayLen(new Array(), 1)).toEqual(0);
       //
@@ -13,10 +11,10 @@ describe('minSubArrayLen()', () => {
     });
   });
 
-  describe('when the entire array summed is not >= n', () => {
-    it('should return 0', () => {
+  describe("when the entire array summed is not >= n", () => {
+    it("should return 0", () => {
       expect(
-        minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 95)
+        minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 95),
       ).toEqual(0);
       //
       // Even adding all the elements doesn't amount to 95.
@@ -24,15 +22,15 @@ describe('minSubArrayLen()', () => {
     });
   });
 
-  describe('when a single element >= n', () => {
-    it('should return 1', () => {
+  describe("when a single element >= n", () => {
+    it("should return 1", () => {
       expect(minSubArrayLen([1, 13, 7], 13)).toEqual(1);
       //
       // 1 Because 13 >= 13.
       //
 
       expect(
-        minSubArrayLen([3, 1, 7, 11, 2, 9, 8, 21, 62, 33, 19], 52)
+        minSubArrayLen([3, 1, 7, 11, 2, 9, 8, 21, 62, 33, 19], 52),
       ).toEqual(1);
 
       // 1 because 62 >= 52.
@@ -40,8 +38,8 @@ describe('minSubArrayLen()', () => {
     });
   });
 
-  describe('when 2 elements summed >= n', () => {
-    it('should return 2', () => {;
+  describe("when 2 elements summed >= n", () => {
+    it("should return 2", () => {
       expect(
         minSubArrayLen([2, 3, 1, 2, 4, 3], 7),
       ).toEqual(2);
@@ -56,8 +54,8 @@ describe('minSubArrayLen()', () => {
     });
   });
 
-  describe('when all the elements are required', () => {
-    it('should return the length of the input array', () => {
+  describe("when all the elements are required", () => {
+    it("should return the length of the input array", () => {
       const nums3 = [1, 2, 3];
       expect(minSubArrayLen(nums3, 6)).toEqual(nums3.length);
 
@@ -66,7 +64,7 @@ describe('minSubArrayLen()', () => {
     });
   });
 
-  it('should handle random subarray lengths required', () => {
+  it("should handle random subarray lengths required", () => {
     minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 39);
     // 3
 

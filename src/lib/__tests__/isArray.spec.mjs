@@ -1,27 +1,27 @@
-import { isArray } from '../isArray';
+import { isArray } from "../isArray";
 
-describe('isArray()', () => {
-  describe('when param is not of type array', () => {
-    it('shold return false', () => {
+describe("isArray()", () => {
+  describe("when param is not of type array", () => {
+    it("shold return false", () => {
       [
         undefined,
         null,
-        'some string',
+        "some string",
         { id: 1 },
         /pattern/g,
-      ].forEach(param => {
+      ].forEach((param) => {
         expect(isArray(param)).toBe(false);
       });
     });
   });
 
-  describe('when param is an array', () => {
-    it('should return true', () => {
+  describe("when param is an array", () => {
+    it("should return true", () => {
       [
         [],
-        ['x', 'y', 'z'],
+        ["x", "y", "z"],
         new Array(-3, -2, -1, -0),
-      ].forEach(param => {
+      ].forEach((param) => {
         expect(isArray(param)).toBe(true);
       });
     });

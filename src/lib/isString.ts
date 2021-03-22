@@ -5,5 +5,5 @@
  * @return A boolean indicating whether `val` is a string or not.
  */
 export function isString(val: unknown): boolean {
-  return !!(typeof val === 'string' || val instanceof String);
+  return !!(typeof val === "string" || val instanceof String);
 }

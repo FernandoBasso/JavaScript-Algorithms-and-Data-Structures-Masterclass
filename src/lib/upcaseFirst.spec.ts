@@ -1,10 +1,6 @@
-import {
-  assertEquals,
-} from "/deps.ts";
+import { assertEquals } from "/deps.ts";
 
-import {
-  upcaseFirst,
-} from "./upcaseFirst.ts";
+import { upcaseFirst } from "./upcaseFirst.ts";
 
 Deno.test("should return empty string", () => {
   assertEquals(upcaseFirst(""), "");

@@ -2,10 +2,10 @@ import {
   // fib_v1, as fib,
   // fib_v2 as fib,
   fib_v3 as fib,
-} from './fibonacci';
+} from "./fibonacci";
 
-describe('fib()', () => {
-  it('should return nth number in the fibonacci sequence', () => {
+describe("fib()", () => {
+  it("should return nth number in the fibonacci sequence", () => {
     expect(fib(1)).toEqual(1);
     expect(fib(2)).toEqual(1);
     expect(fib(4)).toEqual(3);

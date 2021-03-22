@@ -81,10 +81,4 @@ function sumRange_v4(n) {
   return n + sumRange_v4(n - 1);
 }
 
-
-export {
-  sumRange_v1,
-  sumRange_v2,
-  sumRange_v3,
-  sumRange_v4,
-};
+export { sumRange_v1, sumRange_v2, sumRange_v3, sumRange_v4 };

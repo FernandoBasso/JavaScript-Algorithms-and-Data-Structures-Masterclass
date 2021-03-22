@@ -23,6 +23,4 @@ function isPalindrome(s: string): boolean {
   return isPalindrome(s.substring(1, len - 1));
 }
 
-export {
-  isPalindrome,
-};
+export { isPalindrome };

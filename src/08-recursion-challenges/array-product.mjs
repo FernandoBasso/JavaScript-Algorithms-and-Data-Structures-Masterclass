@@ -9,7 +9,4 @@ function arrayProduct(nums) {
   return nums[0] * arrayProduct(nums.slice(1));
 }
 
-export {
-  arrayProduct,
-};
-
+export { arrayProduct };

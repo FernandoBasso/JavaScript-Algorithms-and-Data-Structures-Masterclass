@@ -1,8 +1,4 @@
-import {
-  isArray,
-  isString,
-  isEmpty,
-} from "/src/lib/index.ts";
+import { isArray, isEmpty, isString } from "/src/lib/index.ts";
 
 /**
  * Returns the first element of `lst`.
@@ -24,13 +20,15 @@ import {
  * // → TypeError exception
  */
 function car<T = unknown>(lst: Array<T> | string): T | string {
-  if (!isArray(lst) && !isString(lst))
+  if (!isArray(lst) && !isString(lst)) {
     throw new TypeError("car(): invalid parameter type");
+  }
 
-  if (isEmpty(lst))
+  if (isEmpty(lst)) {
     throw new TypeError(
-      'car(): cannot get car/head of empty array or string'
+      "car(): cannot get car/head of empty array or string",
     );
+  }
 
   return lst[0];
 }
