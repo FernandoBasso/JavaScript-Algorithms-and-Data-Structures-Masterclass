@@ -3,7 +3,4 @@
   "editor.rulers": [72, 80],
   "editor.wordWrapColumn": 72,
   "editor.wordWrap": "wordWrapColumn",
-  "deno.enable": true,
-  "deno.lint": true,
-  "deno.unstable": false,
 }

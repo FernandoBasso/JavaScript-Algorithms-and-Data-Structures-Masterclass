@@ -1,0 +1,31 @@
+{
+  "name": "algorithms-data-structures-javascript",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "My notes and solutions on the Algorithms and Data Structures in JavaScript course",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "docs": "jsdoc -c jsdoc-config.js --recurse ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/programming-studies/javascript-algorithms-data-structures-masterclass.git"
+  },
+  "keywords": [
+    "javascript",
+    "ecmascript",
+    "algorithms",
+    "data-structures",
+    "programming"
+  ],
+  "author": "",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://gitlab.com/programming-studies/javascript-algorithms-data-structures-masterclass/issues"
+  },
+  "homepage": "https://gitlab.com/programming-studies/javascript-algorithms-data-structures-masterclass#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
