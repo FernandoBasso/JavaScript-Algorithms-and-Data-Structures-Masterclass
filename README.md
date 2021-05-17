@@ -66,27 +66,41 @@ npm run file path/to/file.mjs
 
 It seems Deno does not (yet) provide a way to detect ‘.spec.ts’ as test files, so, let's do it from the shell for now.
 
+**NOTE**: On bash, make sure `globstar` is on:
+
+```shell
+shopt -s globstar
+```
+
 This works, but you can't see which test is from which file:
 
-	deno test ./**/*.spec.ts
+```shell
+deno test --import-map=import-map.json ./**/*.spec.ts
+```
 
 Or this, which let's us see each file, but then requires to start a new deno process for each file... Anyway, here it is:
 
 ```shell
 files=(**/*.spec.ts)
-for f in "${files[@]}"; do deno test "$f"; done
+for f in "${files[@]}"
+do
+  deno test --import-map=import-map.json "$f"
+done
 ```
 
 Or without the array:
 
 ```shell
-for f in **/*.spec.ts; do deno test "$f"; done
+for f in **/*.spec.ts
+do
+  deno test --import-map=import-map.json "$f"
+done
 ```
 
 To run a single file:
 
 ```shell
-deno test path/to/file.spec.ts
+deno test --import-map=import-map.json path/to/file.spec.ts
 ```
 
 **NOTE**: As of now, Deno test runner does not have a watch mode.
