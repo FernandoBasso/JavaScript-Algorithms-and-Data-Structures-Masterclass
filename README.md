@@ -1,16 +1,22 @@
 # Algorithms and Data Structures JavaScript Masterclass
 
-- [Algorithms and Data Structures JavaScript Masterclass](#algorithms-and-data-structures-javascript-masterclass)
-  - [Basic](#basic)
-  - [JavaScript Unit Tests](#javascript-unit-tests)
 
-**NOTE**: Stuff from [Colt Steele course on Udemy](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass). Project configuration and unit tests is my own work (the code on the video lessons is written directly on Chrome, no tests). It is one of my goals to TDD as much as possible in all things I do.
+<!-- vim-markdown-toc GitLab -->
+
+* [Intro](#intro)
+* [JavaScript Unit Tests](#javascript-unit-tests)
+
+<!-- vim-markdown-toc -->
+
+## Intro
+
+**NOTE**: Stuff from [Colt Steele course on Udemy](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass). Project configuration and unit tests is my own work (the code on the video lessons is written directly on Chrome, no tests). It is one of my goals to TDD as much as possible in all things I do. I sometimes also use better identifier names (for functions and variables) because although I try to document (with comments) some important stuff, I also strive for the best self-documenting code possible, always!
 
 **NOTE**: The [Github repo](https://github.com/FernandoBasso/JavaScript-Algorithms-and-Data-Structures-Masterclass) is just a push mirror of the main [repo on Gitlab](https://gitlab.com/programming-studies/javascript-algorithms-data-structures-masterclass).
 
-## Basic
+**NOTE**: I am **intentionally not using any linting** in this project because I want to have some freedom with formatting. Some presets try to prevent you from using bitwise operators, for example. There are legitimate cases where they are OK to use. I don't want to spend my time studying algorithms fighting the linter, disabling or tweaking rules, etc. And just to be clear, for a React, Vue.js, a Node + Express API, OK, I do use linters, but not in this algorithms and data structures study project.
 
-**NOTE**: I am **intentionally not using any linting** in this project because I want to have some freedom with formatting and use of some cool tricks. Some presets try to prevent you from using bitwise operators, for example. There are legitimate cases where they are OK to use. I don't want to spend my time studying algorithms fighting the linter, disabling or tweaking rules, etc. And just to be clear, for a React, Vue.js, a Node + Express API, OK, I do use linters, but not in this algorithms and data structures study project.
+*NOTE**: Some problems have more than one solution because I like to try multiple approaches. Some may use ramda in a more functional way, some will use my own helper functions, some will be recursive, etc.
 
 Install [nvm](https://github.com/nvm-sh/nvm) and run these commands (just once):
 
