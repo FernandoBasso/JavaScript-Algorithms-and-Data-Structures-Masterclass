@@ -2,7 +2,7 @@
  * Returns the subtotals of the sum of the array elements.
  *
  * @param {Array<number>} xs
- * @return {Array<number>} xs
+ * @return {Array<number>}
  *
  * **TIME COMPLEXITY**: `O(n²)`. We have to do a loop inside a loop, and
  * the inner loop eventually runs for the entire length of the input

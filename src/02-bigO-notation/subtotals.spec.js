@@ -1,4 +1,4 @@
-import { subtotals } from './subtotals-v1';
+import { subtotals } from './subtotals-v2';
 
 describe('subtotals()', () => {
   it('should produce the correct subtotals', () => {
