@@ -1,8 +1,8 @@
-import { same } from './same-v1';
+import { same } from './same-v2';
 
-describe("same()", () => {
-  describe("when any value in a1 lack a matching vlaue in a2", () => {
-    it("should return false", () => {
+describe('same()', () => {
+  describe('when any value in a1 lack a matching vlaue in a2', () => {
+    it('should return false', () => {
       // 1 squared is 1, but it is not in the second array.
       expect(same([1, 2, 3], [4, 9])).toBe(false);
 
@@ -14,8 +14,8 @@ describe("same()", () => {
     });
   });
 
-  describe("when all values in a1 have matching values in a2", () => {
-    it("should return true", () => {
+  describe('when all values in a1 have matching values in a2', () => {
+    it('should return true', () => {
       expect(same([1, 2, 3], [1, 4, 9])).toBe(true);
       expect(same([1, 2, 3], [9, 1, 4])).toBe(true);
     });
