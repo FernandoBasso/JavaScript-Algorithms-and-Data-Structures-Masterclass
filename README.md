@@ -4,6 +4,7 @@
 <!-- vim-markdown-toc GitLab -->
 
 * [Intro](#intro)
+* [Naming Files](#naming-files)
 * [JavaScript Unit Tests](#javascript-unit-tests)
 
 <!-- vim-markdown-toc -->
@@ -24,6 +25,13 @@ Install [nvm](https://github.com/nvm-sh/nvm) and run these commands (just once):
 nvm install --lts
 npm install
 ```
+
+## Naming Files
+
+We use cameCase for naming the spec and solution files.
+
+* Unit test files are named like `addUpTo.spec.js`. The extension is **.spec.js**.
+* Implementation files will most likely always have a few different versions (solution approaches), and we name them like `addUpTo-v{1,2,3,...}.js`. Note the `v1`, `v2` etc. “version” thing. Examples would be `addUpTo-v1.js` and `addUpTo-v2.js`. The same unit test file is used to test different implementations of the solution.
 
 ## JavaScript Unit Tests
 

@@ -1,4 +1,4 @@
-import { addUpTo } from './v2_add-up-to';
+import { addUpTo } from './addUpTo-v2';
 
 describe('addUpTo()', () => {
   it('should add nothing', () => {
