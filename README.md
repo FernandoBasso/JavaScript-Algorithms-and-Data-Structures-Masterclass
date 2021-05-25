@@ -18,7 +18,7 @@
 
 **NOTE**: I am **intentionally not using any linting** in this project because I want to have some freedom with formatting. Some presets try to prevent you from using bitwise operators, for example. There are legitimate cases where they are OK to use. I don't want to spend my time studying algorithms fighting the linter, disabling or tweaking rules, etc. And just to be clear, for a React, Vue.js, a Node + Express API, OK, I do use linters, but not in this algorithms and data structures study project.
 
-*NOTE**: Some problems have more than one solution because I like to try multiple approaches. In the future, I hope I come back and do implementations using ramda using a very FP-style approach.
+**NOTE**: Some problems have more than one solution because I like to try multiple approaches. In the future, I hope I come back and do implementations using ramda using a very FP-style approach.
 
 Install [nvm](https://github.com/nvm-sh/nvm) and run these commands (just once):
 
