@@ -8,6 +8,10 @@
     "test": "NODE_OPTIONS=--experimental-vm-modules NODE_PATH=. npx jest",
     "docs": "jsdoc -c jsdoc-config.json --recurse"
   },
+  "engines": {
+    "node": "v16.15.1",
+    "npm": "8.12.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@gitlab.com/programming-studies/javascript-algorithms-data-structures-masterclass.git"
@@ -26,10 +30,11 @@
   },
   "homepage": "https://gitlab.com/programming-studies/javascript-algorithms-data-structures-masterclass#readme",
   "devDependencies": {
-    "jest": "^26.6.3",
-    "jsdoc": "^3.6.7"
+    "@types/jest": "^28.1.1",
+    "jest": "^28.1.1",
+    "jsdoc": "^3.6.10"
   },
   "dependencies": {
-    "ramda": "^0.27.1"
+    "ramda": "^0.28.0"
   }
 }

@@ -1,18 +1,16 @@
 # Algorithms and Data Structures JavaScript Masterclass
 
-
-<!-- vim-markdown-toc GitLab -->
-
 * [Intro](#intro)
 * [Naming Files](#naming-files)
 * [Project Configuration](#project-configuration)
 * [JavaScript Unit Tests](#javascript-unit-tests)
-
-<!-- vim-markdown-toc -->
+* [TypeScript and Deno](#typescript-and-deno)
 
 ## Intro
 
-My solutions, code and notes from [Colt Steele course on Udemy](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass). Project configuration and unit tests is my own work (the code on the video lessons is written directly on Chrome, no tests). It is one of my goals to TDD as much as possible in all things I do. I sometimes also use better identifier names (for functions and variables) because although I try to document (with comments) some important stuff, I also strive for the best self-documenting code possible, always!
+This repository contains my solutions, code and notes from [Colt Steele course on Udemy](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass).
+
+Project configuration and unit tests is my own work (the code on the video lessons is written directly on Chrome, no tests). It is one of my goals to TDD as much as possible in all things I do. I sometimes also use better identifier names (for functions and variables) because although I try to document (with comments) some important stuff, I also strive for the best self-documenting code possible, always!
 
 The [Github repo](https://github.com/FernandoBasso/JavaScript-Algorithms-and-Data-Structures-Masterclass) is just a push mirror of the main [repo on Gitlab](https://gitlab.com/programming-studies/javascript-algorithms-data-structures-masterclass).
 
@@ -66,4 +64,14 @@ npm run test -- --watch --silent
 ```
 
 **NOTE**: Replace `--watch` with `--watchAll` if not inside a Git repo.
+
+## TypeScript and Deno
+
+```shell-session
+$ deno run --import-map ./import-map.json **/*.ts
+```
+
+If we use an usntable Deno feature, we can also use `--unstable`. Also run `:CocLocalConfig` from vim/nvim if using unstable APIs.
+
+Sometimes `--quiet` is nice too. Run `deno --help | cat` for more information.
 
