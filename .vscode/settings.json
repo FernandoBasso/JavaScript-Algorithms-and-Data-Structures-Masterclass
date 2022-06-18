@@ -6,5 +6,8 @@
   "deno.enable": true,
   "deno.lint": true,
   "deno.unstable": false,
-  "deno.importMap": "./import-map.json"
+  "deno.importMap": "./import-map.json",
+  "cSpell.words": [
+    "mathy"
+  ]
 }

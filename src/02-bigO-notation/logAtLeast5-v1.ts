@@ -10,9 +10,9 @@
  *
  * @param n The minimum number of times to log.
  */
-function logAtLeast5(n: number): void {
+function logAtMost5(n: number): void {
   for (let i = 0; i < Math.max(n, 5); ++i)
     console.log(n);
 }
 
-export { logAtLeast5 };
+export { logAtMost5 };
