@@ -10,7 +10,7 @@ beforeEach(() => {
 });
 
 describe("logAtLeast5()", () => {
-  describe("when the input is less than or equalt to 5", () => {
+  describe("when the input is less than or equal to 5", () => {
     [1].forEach((num) => {
       it(`for number ${num} it should log exactly 5 times`, () => {
         logAtLeast5(num);

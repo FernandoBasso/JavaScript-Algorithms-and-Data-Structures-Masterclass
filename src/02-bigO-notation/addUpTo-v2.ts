@@ -15,4 +15,3 @@ function addUpTo(n: number): number {
 }
 
 export { addUpTo };
-
